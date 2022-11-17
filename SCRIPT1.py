@@ -39,13 +39,14 @@ time.sleep(2)
 drone.sendDisplayDrawString(0, 0, "LOADING")
 time.sleep(5)
 
-#make controller LED green to indicate that drone is ready
-drone.set_controller_LED(21, 162, 12, 100)
-
 #get takeoff location data
 takeoffloc = drone.get_position_data()
 print(takeoffloc)
 drone.set_waypoint()
+
+
+#make controller LED green to indicate that drone is ready
+drone.set_controller_LED(21, 162, 12, 100)
 
 #press S to start 
 while True:
