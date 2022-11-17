@@ -28,7 +28,7 @@ if battery <= 20:
     exit()
 
 if Temp => 45:
-    print("Drone too hot")
+    print("Drone Overheated")
     exit()
 
 #127 x 63 pixels
