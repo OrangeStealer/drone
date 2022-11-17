@@ -46,6 +46,9 @@ drone.keep_distance(10, 600)
 fcd1 = drone.get_front_color()
 print(fcd1)
 
+#drone landing indicator
+drone.set_controller_LED(255, 0, 0, 100)
+
 #land and close drone connection
 drone.land()
 drone.close()
