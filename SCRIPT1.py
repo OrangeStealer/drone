@@ -22,7 +22,7 @@ print(startpos)
 drone.reset_sensor() 
 time.sleep(3)
 
-#If batter is less than 30% then wont start
+#If batter is less than 20% then wont start
 if battery <= 20:
     print("Drone battery too low to start")
     exit()
@@ -34,10 +34,18 @@ if Temp => 45:
 #127 x 63 pixels
 #create controller screen UI
 drone.controller_clear_screen()
-drone.sendDisplayDrawString(0, 0, "SCPT1 V3.2")
+drone.sendDisplayDrawString(0, 0, "SCRIPT1 V3.2")
+time.sleep(2)
+drone.sendDisplayDrawString(0, 0, "LOADING")
+time.sleep(5)
 
 #make controller LED green to indicate that drone is ready
 drone.set_controller_LED(21, 162, 12, 100)
+
+#get takeoff location data
+takeoffloc = drone.get_position_data()
+print(takeoffloc)
+drone.set_waypoint()
 
 #press S to start 
 while True:
@@ -51,9 +59,11 @@ drone.keep_distance(10, 600)
 fcd1 = drone.get_front_color()
 print(fcd1)
 
-
 #drone landing indicator
 drone.set_controller_LED(255, 0, 0, 100)
+
+#go to landing pad
+drone.goto_waypoint(drone.waypoint_data[0], 0.5)
 
 #land and close drone connection
 drone.land()
