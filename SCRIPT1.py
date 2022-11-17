@@ -23,7 +23,12 @@ drone.reset_sensor()
 time.sleep(3)
 
 #If batter is less than 30% then wont start
-if battery <= 30:
+if battery <= 20:
+    print("Drone battery too low to start")
+    exit()
+
+if Temp => 45:
+    print("Drone too hot")
     exit()
 
 #127 x 63 pixels
@@ -45,6 +50,7 @@ drone.hover(1)
 drone.keep_distance(10, 600)
 fcd1 = drone.get_front_color()
 print(fcd1)
+
 
 #drone landing indicator
 drone.set_controller_LED(255, 0, 0, 100)
