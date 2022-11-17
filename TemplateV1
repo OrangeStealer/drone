@@ -34,7 +34,7 @@ if Temp => 45:
 #127 x 63 pixels
 #create controller screen UI
 drone.controller_clear_screen()
-drone.sendDisplayDrawString(0, 0, "Hello, world!")
+drone.sendDisplayDrawString(0, 0, "TEMPLATE V3")
 
 #make controller LED green to indicate that drone is ready
 drone.set_controller_LED(21, 162, 12, 100)
