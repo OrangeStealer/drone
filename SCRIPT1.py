@@ -18,9 +18,9 @@ print('Temp: ' + str(Temp) + 'C')
 startpos = get_position_data()
 print(startpos)
 
-#Resets the drones sensor and sleeps for 1 second
+#Resets the drones sensor and sleeps for 3 seconds
 drone.reset_sensor() 
-time.sleep(1)
+time.sleep(3)
 
 #If batter is less than 30% then wont start
 if battery <= 30:
@@ -29,6 +29,9 @@ if battery <= 30:
 #create controller screen UI
 drone.controller_clear_screen()
 drone.sendDisplayDrawString(0, 0, "Hello, world!")
+
+#make controller LED green to indicate that drone is ready
+drone.set_controller_LED(21, 162, 12, 100)
 
 #press S to start 
 while True:
