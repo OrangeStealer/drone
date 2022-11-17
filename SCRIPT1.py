@@ -22,6 +22,10 @@ time.sleep(1)
 #If batter is less than 30% then wont start
 if battery <= 30:
     exit()
+#127 x 63 pixels
+#create controller screen UI
+drone.controller_clear_screen()
+drone.sendDisplayDrawString(0, 0, "Hello, world!")
 
 #press S to start 
 while True:
