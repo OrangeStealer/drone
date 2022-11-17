@@ -1,3 +1,13 @@
+import time
+
+import keyboard
+from codrone_edu.drone import *
+
+#Inits drone library and pairs to the drone
+drone = Drone()
+#drone.pair(portname)
+drone.pair()
+ 
 #Variables
 battery = drone.get_battery()
 Temp = drone.get_drone_temp()
@@ -16,6 +26,7 @@ if battery <= 30:
 #Movement
 drone.takeoff()
 drone.hover(1)
+
 #land and close drone connection
 drone.land()
 drone.close()
