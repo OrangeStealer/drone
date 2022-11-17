@@ -26,6 +26,9 @@ if battery <= 30:
 #Movement
 drone.takeoff()
 drone.hover(1)
+drone.keep_distance(10, 600)
+fcd1 = drone.get_front_color()
+print(fcd1)
 
 #land and close drone connection
 drone.land()
