@@ -13,7 +13,10 @@ battery = drone.get_battery()
 Temp = drone.get_drone_temp()
 
 #print drone status
+drone.get_flight_state()
 print('Temp: ' + str(Temp) + 'C')
+startpos = get_position_data()
+print(startpos)
 
 #Resets the drones sensor and sleeps for 1 second
 drone.reset_sensor() 
