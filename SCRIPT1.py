@@ -25,6 +25,7 @@ time.sleep(3)
 #If batter is less than 30% then wont start
 if battery <= 30:
     exit()
+
 #127 x 63 pixels
 #create controller screen UI
 drone.controller_clear_screen()
@@ -37,7 +38,7 @@ drone.set_controller_LED(21, 162, 12, 100)
 while True:
     time.sleep(0.1)
     if drone.s_pressed():
-    drone.takeoff
+    drone.takeoff()
 
 #Movement
 drone.hover(1)
