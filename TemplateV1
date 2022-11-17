@@ -30,3 +30,5 @@ drone.hover(1)
 #land and close drone connection
 drone.land()
 drone.close()
+
+#this is a test
