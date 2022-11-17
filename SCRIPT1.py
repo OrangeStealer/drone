@@ -23,8 +23,13 @@ time.sleep(1)
 if battery <= 30:
     exit()
 
+#press S to start 
+while True:
+    time.sleep(0.1)
+    if drone.s_pressed():
+    drone.takeoff
+
 #Movement
-drone.takeoff()
 drone.hover(1)
 drone.keep_distance(10, 600)
 fcd1 = drone.get_front_color()
