@@ -44,7 +44,6 @@ takeoffloc = drone.get_position_data()
 print(takeoffloc)
 drone.set_waypoint()
 
-
 #make controller LED green to indicate that drone is ready
 drone.set_controller_LED(21, 162, 12, 100)
 
