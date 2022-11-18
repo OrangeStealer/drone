@@ -6,3 +6,5 @@ TO GET COMMITS
 
 BOTTOM OF SCREEN
 SYNC COMMITS
+
+why would you star this?
