@@ -27,7 +27,7 @@ if battery <= 20:
     print("Drone battery too low to start")
     exit()
 
-if Temp => 45:
+if Temp >= 45:
     print("Drone Overheated")
     exit()
 
@@ -62,7 +62,7 @@ print(fcd1)
 #return home if red block in front of drone
 #else move to right and loop
 def FCN1():
-    if fcd1 == red
+    if fcd1 == red:
         drone.goto_waypoint(drone.waypoint_data[0], 0.5)
     else:
         drone.set_roll(50)
