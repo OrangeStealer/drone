@@ -46,6 +46,7 @@ drone.set_waypoint()
 
 #make controller LED green to indicate that drone is ready
 drone.set_controller_LED(21, 162, 12, 100)
+drone.controller_preview_canvas()
 
 #press S to start 
 while True:

@@ -1,6 +1,5 @@
 import time
-# BUY GITHUB COPIIT 
-#
+
 import keyboard
 from codrone_edu.drone import *
 
