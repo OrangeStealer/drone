@@ -15,7 +15,7 @@ Temp = drone.get_drone_temp()
 #print drone status
 drone.get_flight_state()
 print('Temp: ' + str(Temp) + 'C')
-startpos = get_position_data()
+startpos = drone.get_position_data()
 print(startpos)
 
 #Resets the drones sensor and sleeps for 3 seconds
@@ -73,6 +73,7 @@ def FCN1():
 
 #drone landing indicator
 drone.set_controller_LED(255, 0, 0, 100)
+drone.controller_buzzer(600, 1000)
 
 #go to landing pad
 drone.goto_waypoint(drone.waypoint_data[0], 0.5)
