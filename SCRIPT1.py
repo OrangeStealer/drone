@@ -66,7 +66,7 @@ def FCN1():
         drone.goto_waypoint(drone.waypoint_data[0], 0.5)
     else:
         drone.set_roll(50)
-        drone.move()
+        drone.move(0.5)
         drone.set_roll(0)
         FCN1()
 
