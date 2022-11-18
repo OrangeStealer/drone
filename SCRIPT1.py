@@ -59,6 +59,16 @@ drone.keep_distance(10, 600)
 fcd1 = drone.get_front_color()
 print(fcd1)
 
+#return home if red block in front of drone
+def FCN1():
+    if fcd1 == red
+        drone.goto_waypoint(drone.waypoint_data[0], 0.5)
+    else:
+        drone.set_roll(50)
+        drone.move()
+        drone.set_roll(0)
+        FCN1()
+
 #drone landing indicator
 drone.set_controller_LED(255, 0, 0, 100)
 
