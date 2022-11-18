@@ -60,6 +60,7 @@ fcd1 = drone.get_front_color()
 print(fcd1)
 
 #return home if red block in front of drone
+#else move to right and loop
 def FCN1():
     if fcd1 == red
         drone.goto_waypoint(drone.waypoint_data[0], 0.5)
