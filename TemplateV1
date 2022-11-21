@@ -1,5 +1,4 @@
 import time
-
 import keyboard
 from codrone_edu.drone import *
 
@@ -53,6 +52,12 @@ takeoffloc = drone.get_position_data()
 print(takeoffloc)
 drone.set_waypoint()
 
+#draw controller screen UI
+drone.controller_clear_screen()
+drone.sendDisplayDrawString(0, 0, "SCRIPT1 V3.5")
+drone.sendDisplayDrawString(0, 10, "Battery: " + str(battery) + "%")
+drone.sendDisplayDrawString(0, 20, "Temp: " + str(Temp) + "C")
+
 #make controller LED green to indicate that drone is ready
 drone.set_controller_LED(21, 162, 12, 100)
 drone.sendDisplayDrawString(0,0,"Press S to start Drone!")
@@ -63,11 +68,12 @@ while True:
     time.sleep(0.1)
     if drone.s_pressed():
          drone.takeoff()
+         drone.controller_clear_screen()
          drone.sendDisplayDrawString(0,0,"Code Running")
          break
 
 #Movement
-drone.hover(1)
+#drone.hover(1)
 
 #drone landing indicator
 drone.set_controller_LED(255, 0, 0, 100)
