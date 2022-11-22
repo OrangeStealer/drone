@@ -73,14 +73,8 @@ while True:
          break
 
 #Movement
-def FCN1():
-    if fcd1 == red:
-        drone.goto_waypoint(drone.waypoint_data[0], 0.5)
-    else:
-        drone.set_roll(50)
-        drone.move(0.5)
-        drone.set_roll(0)
-        FCN1()
+color_data = drone.get_front_color()
+print(color_data)
 
 #drone landing indicator
 drone.set_controller_LED(255, 0, 0, 100)
